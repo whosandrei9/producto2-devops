@@ -48,6 +48,7 @@ pipeline {
             steps {
                 sh """
                     ${MINIKUBE} image build -t ${IMAGE_TAG} .
+                    ${MINIKUBE} image load ${IMAGE_TAG}
                 """
             }
         }
