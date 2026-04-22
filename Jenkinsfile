@@ -47,8 +47,7 @@ pipeline {
         stage('Construir imagen en minikube') {
             steps {
                 sh """
-                    ${MINIKUBE} image build -t ${IMAGE_TAG} .
-                    ${MINIKUBE} image load ${IMAGE_TAG}
+                    ${MINIKUBE} image build --all -t ${IMAGE_TAG} .
                 """
             }
         }
