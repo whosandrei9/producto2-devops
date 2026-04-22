@@ -101,7 +101,7 @@ func inicioHandler(w http.ResponseWriter, r *http.Request) {
 <body>
 	<div class="contenedor">
 		<h1>Soy alumno de la UOC</h1>
-		<p>Aplicación desplegada con Jenkins y Kubernetes para el Producto 2.</p>
+		<p>Aplicación desplegada con Jenkins y Kubernetes para el Producto 2 - rama main.</p>
 
 		<div class="datos">
 			<p><strong>Entorno:</strong> %s</p>
