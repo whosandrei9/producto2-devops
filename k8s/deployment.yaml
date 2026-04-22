@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producto2-uoc
+  namespace: __NAMESPACE__
+spec:
+  replicas: __REPLICAS__
+  selector:
+    matchLabels:
+      app: producto2-uoc
+  template:
+    metadata:
+      labels:
+        app: producto2-uoc
+    spec:
+      containers:
+        - name: producto2-uoc
+          image: __IMAGE__
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: APP_ENV
+              value: "__APP_ENV__"
